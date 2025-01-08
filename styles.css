@@ -1,0 +1,79 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.cv-container {
+  width: 21cm; /* A4 width */
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #000;
+  box-sizing: border-box;
+}
+
+header {
+  text-align: center;
+}
+
+section {
+  margin-top: 20px;
+}
+
+h1,
+h2 {
+  color: #333;
+}
+
+/* Style 1 */
+.style1 {
+  background-color: #fff;
+  color: #000;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Style 2 */
+.style2 {
+  background-color: #fff;
+  color: #333;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Style 3 */
+.style3 {
+  background-color: #fff;
+  color: #555;
+  font-family: "Lora", serif;
+}
+
+/* Print styles */
+@media print {
+  body,
+  .cv-container {
+    width: 100%;
+    height: auto;
+    border: none;
+  }
+
+  .cv-container {
+    page-break-inside: avoid;
+  }
+
+  .header-container {
+    page-break-inside: avoid;
+    page-break-after: avoid;
+  }
+
+  section {
+    page-break-inside: avoid;
+    page-break-before: auto;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+
+  p,
+  ul {
+    page-break-inside: avoid;
+  }
+}
