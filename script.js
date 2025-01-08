@@ -1,4 +1,5 @@
 let currentStyle = 0;
+let isDarkMode = false;
 
 function toggleStyle() {
   const cvContainer = document.querySelector(".cv-container");
@@ -13,4 +14,13 @@ function toggleStyle() {
   } else if (currentStyle === 2) {
     cvContainer.classList.add("style3");
   }
+
+  toggleTheme();
+}
+
+function toggleTheme() {
+  const body = document.body;
+  body.classList.toggle("dark-mode", isDarkMode);
+  body.classList.toggle("light-mode", !isDarkMode);
+  isDarkMode = !isDarkMode;
 }
