@@ -59,6 +59,26 @@ body.dark-mode a {
   font-family: "Lora", serif;
 }
 
+/* Style 4 - Cool Animated Background */
+.style4 {
+  font-family: "Courier New", monospace;
+  color: #00ff00;
+}
+
+.animated-background {
+  background: url("stars.gif") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Header Alignments */
+.left-align header {
+  text-align: left;
+}
+
+.center-align header {
+  text-align: center;
+}
+
 /* Print styles */
 @media print {
   body,
