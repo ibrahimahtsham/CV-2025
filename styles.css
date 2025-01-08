@@ -1,5 +1,6 @@
 body {
   font-family: "Roboto", sans-serif;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .cv-container {
@@ -20,17 +21,17 @@ section {
 
 h1,
 h2 {
-  color: #333;
+  color: inherit;
 }
 
 /* Light Mode */
-.light-mode {
+body.light-mode {
   background-color: #fff;
   color: #000;
 }
 
 /* Dark Mode */
-.dark-mode {
+body.dark-mode {
   background-color: #333;
   color: #fff;
 }
