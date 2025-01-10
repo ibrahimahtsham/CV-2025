@@ -1,5 +1,6 @@
 body {
   font-family: "Roboto", sans-serif;
+  font-size: 14px; /* Decreased font size */
   transition: background-color 0.3s, color 0.3s;
 }
 
@@ -31,7 +32,11 @@ body.light-mode {
 }
 
 body.light-mode a {
-  color: #007bff; /* Blue color for links in light mode */
+  color: #007bff;
+}
+
+body.light-mode svg {
+  fill: #007bff;
 }
 
 /* Dark Mode */
@@ -41,7 +46,11 @@ body.dark-mode {
 }
 
 body.dark-mode a {
-  color: #1e90ff; /* Light blue color for links in dark mode */
+  color: #1e90ff;
+}
+
+body.dark-mode svg {
+  fill: #ffffff;
 }
 
 /* Style 1 */
@@ -66,17 +75,45 @@ body.dark-mode a {
 }
 
 .animated-background {
-  background: url("stars.gif") no-repeat center center fixed;
+  background: url("/images/stars.gif") no-repeat center center fixed;
   background-size: cover;
 }
 
+.animated-background svg {
+  fill: #00ff00;
+}
+
 /* Header Alignments */
-.left-align header {
+.left-align {
   text-align: left;
 }
 
-.center-align header {
+.center-align {
   text-align: center;
+}
+
+/* Social Links Styling */
+.social-links {
+  display: flex;
+  gap: 20px; /* Adjust the gap as needed */
+  justify-content: flex-start;
+}
+
+.center-align .social-links {
+  justify-content: center;
+}
+
+/* Icon Styling */
+svg {
+  height: 1em;
+  vertical-align: middle;
+}
+
+/* QR Code Styling */
+#qr-code-icon svg {
+  height: 100px;
+  width: 100px;
+  vertical-align: middle;
 }
 
 /* Print styles */
