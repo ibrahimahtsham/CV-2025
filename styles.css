@@ -75,7 +75,7 @@ body.dark-mode svg {
 }
 
 .animated-background {
-  background: url("/images/stars.gif") no-repeat center center fixed;
+  background: url("./images/stars.gif") no-repeat center center fixed;
   background-size: cover;
 }
 
