@@ -76,3 +76,28 @@ function updateIconColors() {
     });
   }
 }
+
+const konamiCode = [
+  "ArrowUp",
+  "ArrowUp",
+  "ArrowDown",
+  "ArrowDown",
+  "ArrowLeft",
+  "ArrowRight",
+  "ArrowLeft",
+  "ArrowRight",
+  "b",
+  "a",
+];
+let konamiCodePosition = 0;
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === konamiCode[konamiCodePosition]) {
+    konamiCodePosition++;
+    if (konamiCodePosition === konamiCode.length) {
+      window.location.href = "https://dn.ht/picklecat/";
+    }
+  } else {
+    konamiCodePosition = 0;
+  }
+});
