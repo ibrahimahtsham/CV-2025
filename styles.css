@@ -34,13 +34,13 @@ header img.grayscale {
 
 #qr-code-container {
   position: absolute;
-  top: 10px; /* Adjust as needed */
-  right: 10px; /* Adjust as needed */
+  top: 10px;
+  right: 10px;
 }
 
 #qr-code-container.below-face {
-  top: 120px; /* Adjust to position below the face image */
-  right: 10px; /* Adjust as needed */
+  top: 120px;
+  right: 10px;
 }
 
 section {
@@ -115,28 +115,24 @@ body.dark-mode svg {
   text-align: left;
 }
 
+.personal-info {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0px 20px;
+}
+
 .center-align {
   text-align: center;
 }
 
-/* Social Links Styling */
-.social-links {
-  display: flex;
-  gap: 20px; /* Adjust the gap as needed */
-  justify-content: flex-start;
-}
-
-.center-align .social-links {
-  justify-content: center;
-}
-
 /* Icon Styling */
 svg {
-  width: 1em; /* Match the text size */
-  height: 1em; /* Match the text size */
-  vertical-align: middle; /* Align with text */
-  fill: currentColor; /* Inherit color from parent */
-  display: inline-block; /* Ensure it is displayed inline */
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  fill: currentColor;
+  display: inline-block;
 }
 
 /* QR Code Styling */
