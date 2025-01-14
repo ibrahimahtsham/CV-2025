@@ -8,6 +8,14 @@ document.addEventListener("DOMContentLoaded", () => {
   loadSVG("images/linkedin-icon.svg", "linkedin-icon");
   loadSVG("images/github-icon.svg", "github-icon");
   loadSVG("images/qr-code.svg", "qr-code-icon");
+
+  // Add event listener to the image to toggle grayscale on click
+  const faceImage = document.querySelector("header img");
+  if (faceImage) {
+    faceImage.addEventListener("click", () => {
+      faceImage.classList.toggle("grayscale");
+    });
+  }
 });
 
 function loadSVG(url, elementId) {
@@ -99,5 +107,20 @@ document.addEventListener("keydown", (event) => {
     }
   } else {
     konamiCodePosition = 0;
+  }
+});
+
+// New code for showing the face image
+const faceCode = ["Numpad7", "Numpad6", "Numpad6", "Numpad7"];
+let faceCodePosition = 0;
+
+document.addEventListener("keydown", (event) => {
+  if (event.code === faceCode[faceCodePosition]) {
+    faceCodePosition++;
+    if (faceCodePosition === faceCode.length) {
+      document.querySelector("header img").style.display = "block";
+    }
+  } else {
+    faceCodePosition = 0;
   }
 });

@@ -14,6 +14,22 @@ body {
 
 header {
   text-align: center;
+  position: relative; /* Add this line */
+}
+
+header img {
+  display: none; /* Initially hide the image */
+  position: absolute;
+  top: 10px; /* Adjust as needed */
+  right: 10px; /* Adjust as needed */
+  width: 100px; /* Adjust as needed */
+  height: 100px; /* Adjust as needed */
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+header img.grayscale {
+  filter: grayscale(100%);
 }
 
 section {
