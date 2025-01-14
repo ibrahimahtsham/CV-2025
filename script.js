@@ -32,6 +32,9 @@ document.addEventListener("DOMContentLoaded", () => {
           element.classList.remove("hidden");
         });
         faceImage.style.display = "block";
+        document
+          .getElementById("qr-code-container")
+          .classList.add("below-face");
       }
     } else {
       personalDetailsCodePosition = 0;
@@ -73,6 +76,7 @@ function toggleStyle() {
     cvContainer.classList.add("style4");
     header.classList.add("center-align");
     body.classList.add("animated-background");
+    isDarkMode = true;
   }
 
   toggleTheme();
@@ -95,14 +99,17 @@ function updateIconColors() {
   if (document.body.classList.contains("animated-background")) {
     icons.forEach((icon) => {
       icon.style.fill = "#00ff00"; // Neon green
+      document.querySelector("#qr-code-icon svg").style.fill = "#00ff00";
     });
   } else if (document.body.classList.contains("dark-mode")) {
     icons.forEach((icon) => {
       icon.style.fill = "#ffffff"; // White
+      document.querySelector("#qr-code-icon svg").style.fill = "#ffffff";
     });
   } else {
     icons.forEach((icon) => {
       icon.style.fill = "#000000"; // Black
+      document.querySelector("#qr-code-icon svg").style.fill = "#000000";
     });
   }
 }

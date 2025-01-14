@@ -1,7 +1,7 @@
 body {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 1s, color 1s;
 }
 
 .cv-container {
@@ -32,6 +32,17 @@ header img.grayscale {
   filter: grayscale(100%);
 }
 
+#qr-code-container {
+  position: absolute;
+  top: 10px; /* Adjust as needed */
+  right: 10px; /* Adjust as needed */
+}
+
+#qr-code-container.below-face {
+  top: 120px; /* Adjust to position below the face image */
+  right: 10px; /* Adjust as needed */
+}
+
 section {
   margin-top: 20px;
 }
@@ -52,7 +63,7 @@ body.light-mode a {
 }
 
 body.light-mode svg {
-  fill: #007bff;
+  fill: #000000;
 }
 
 /* Dark Mode */
