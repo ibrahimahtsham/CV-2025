@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   loadSVG("images/globe-icon.svg", "location-icon-education");
   loadSVG("images/globe-icon.svg", "location-icon-pisj");
   loadSVG("images/globe-icon.svg", "birthplace-icon");
+  loadSVG("images/globe-icon.svg", "location-icon-kips");
   loadSVG("images/phone-icon.svg", "phone-icon");
   loadSVG("images/email-icon.svg", "email-icon");
   loadSVG("images/linkedin-icon.svg", "linkedin-icon");

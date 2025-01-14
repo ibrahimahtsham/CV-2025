@@ -126,6 +126,12 @@ body.dark-mode svg {
   text-align: center;
 }
 
+.center-align .personal-info {
+  width: 70%;
+  margin: 0 auto;
+  justify-content: center;
+}
+
 /* Icon Styling */
 svg {
   width: 1em;
