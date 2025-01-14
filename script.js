@@ -3,12 +3,15 @@ let isDarkMode = false;
 
 document.addEventListener("DOMContentLoaded", () => {
   loadSVG("images/globe-icon.svg", "location-icon");
-  loadSVG("images/globe-icon.svg", "location-icon-education"); // New line
+  loadSVG("images/globe-icon.svg", "location-icon-education");
+  loadSVG("images/globe-icon.svg", "location-icon-pisj");
+  loadSVG("images/globe-icon.svg", "birthplace-icon");
   loadSVG("images/phone-icon.svg", "phone-icon");
   loadSVG("images/email-icon.svg", "email-icon");
   loadSVG("images/linkedin-icon.svg", "linkedin-icon");
   loadSVG("images/github-icon.svg", "github-icon");
   loadSVG("images/qr-code.svg", "qr-code-icon");
+  loadSVG("images/dob-icon.svg", "dob-icon");
 
   // Add event listener to the image to toggle grayscale on click
   const faceImage = document.querySelector("header img");
@@ -17,6 +20,22 @@ document.addEventListener("DOMContentLoaded", () => {
       faceImage.classList.toggle("grayscale");
     });
   }
+
+  const personalDetailsCode = ["Numpad7", "Numpad6", "Numpad6", "Numpad7"];
+  let personalDetailsCodePosition = 0;
+
+  document.addEventListener("keydown", (event) => {
+    if (event.code === personalDetailsCode[personalDetailsCodePosition]) {
+      personalDetailsCodePosition++;
+      if (personalDetailsCodePosition === personalDetailsCode.length) {
+        document.querySelectorAll(".personal-detail").forEach((element) => {
+          element.classList.remove("hidden");
+        });
+      }
+    } else {
+      personalDetailsCodePosition = 0;
+    }
+  });
 });
 
 function loadSVG(url, elementId) {
@@ -109,20 +128,5 @@ document.addEventListener("keydown", (event) => {
     }
   } else {
     konamiCodePosition = 0;
-  }
-});
-
-// New code for showing the face image
-const faceCode = ["Numpad7", "Numpad6", "Numpad6", "Numpad7"];
-let faceCodePosition = 0;
-
-document.addEventListener("keydown", (event) => {
-  if (event.code === faceCode[faceCodePosition]) {
-    faceCodePosition++;
-    if (faceCodePosition === faceCode.length) {
-      document.querySelector("header img").style.display = "block";
-    }
-  } else {
-    faceCodePosition = 0;
   }
 });

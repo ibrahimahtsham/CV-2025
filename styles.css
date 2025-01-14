@@ -1,6 +1,6 @@
 body {
   font-family: "Roboto", sans-serif;
-  font-size: 14px; /* Decreased font size */
+  font-size: 14px;
   transition: background-color 0.3s, color 0.3s;
 }
 
@@ -14,16 +14,16 @@ body {
 
 header {
   text-align: center;
-  position: relative; /* Add this line */
+  position: relative;
 }
 
 header img {
-  display: none; /* Initially hide the image */
+  display: none;
   position: absolute;
-  top: 10px; /* Adjust as needed */
-  right: 10px; /* Adjust as needed */
-  width: 100px; /* Adjust as needed */
-  height: 100px; /* Adjust as needed */
+  top: 10px;
+  right: 10px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -167,4 +167,8 @@ svg {
   ul {
     page-break-inside: avoid;
   }
+}
+
+.hidden {
+  display: none;
 }
