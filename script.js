@@ -67,17 +67,21 @@ function toggleStyle() {
   if (currentStyle === 0) {
     cvContainer.classList.add("style1");
     header.classList.add("left-align");
+    body.classList.remove("bold");
   } else if (currentStyle === 1) {
     cvContainer.classList.add("style2");
     header.classList.add("left-align");
+    body.classList.remove("bold");
   } else if (currentStyle === 2) {
     cvContainer.classList.add("style3");
     header.classList.add("center-align");
+    body.classList.remove("bold");
   } else if (currentStyle === 3) {
     cvContainer.classList.add("style4");
     header.classList.add("center-align");
     body.classList.add("animated-background");
     isDarkMode = true;
+    body.classList.add("bold");
   }
 
   toggleTheme();

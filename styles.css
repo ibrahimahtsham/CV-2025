@@ -97,7 +97,9 @@ body.dark-mode svg {
 
 /* Style 4 - Cool Animated Background */
 .style4 {
-  font-family: "Courier New", monospace;
+  font-family: "Changa One", serif;
+  font-style: normal;
+  font-weight: 900;
   color: #00ff00;
 }
 
