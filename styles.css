@@ -121,8 +121,11 @@ body.dark-mode svg {
 
 /* Icon Styling */
 svg {
-  height: 1em;
-  vertical-align: middle;
+  width: 1em; /* Match the text size */
+  height: 1em; /* Match the text size */
+  vertical-align: middle; /* Align with text */
+  fill: currentColor; /* Inherit color from parent */
+  display: inline-block; /* Ensure it is displayed inline */
 }
 
 /* QR Code Styling */

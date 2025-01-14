@@ -3,6 +3,7 @@ let isDarkMode = false;
 
 document.addEventListener("DOMContentLoaded", () => {
   loadSVG("images/globe-icon.svg", "location-icon");
+  loadSVG("images/globe-icon.svg", "location-icon-education"); // New line
   loadSVG("images/phone-icon.svg", "phone-icon");
   loadSVG("images/email-icon.svg", "email-icon");
   loadSVG("images/linkedin-icon.svg", "linkedin-icon");
@@ -24,7 +25,8 @@ function loadSVG(url, elementId) {
     .then((data) => {
       document.getElementById(elementId).innerHTML = data;
       updateIconColors();
-    });
+    })
+    .catch((error) => console.error(`Error loading SVG: ${error}`));
 }
 
 function toggleStyle() {
