@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelectorAll(".personal-detail").forEach((element) => {
           element.classList.remove("hidden");
         });
+        faceImage.style.display = "block";
       }
     } else {
       personalDetailsCodePosition = 0;
